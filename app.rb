@@ -18,7 +18,6 @@ graph = Koala::Facebook::API.new(TOKEN)
 
 get '/' do
   "Nothing here"
-  puts TOKEN
 end
 
 
