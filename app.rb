@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require 'koala'
+require 'json'
 
 APP_ID =      "113890745407534"
 APP_SECRET =  "2025b11fd4ff299f625d3cb801160b49"
@@ -25,8 +26,8 @@ end
 
 
 post "/facebook" do
-  JSON.parse(params[:payload]).inspect
-  
+  push = JSON.parse params[:payload]
+  puts push.inspect
 end
 
 # Test at <appname>.heroku.com
