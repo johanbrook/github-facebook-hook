@@ -27,6 +27,7 @@ end
 
 post "/facebook" do
   push = JSON.parse params[:payload]
+  puts "Something happened"
   puts push.inspect
 end
 
