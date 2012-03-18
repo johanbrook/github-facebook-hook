@@ -2,15 +2,23 @@ require 'rubygems'
 require 'sinatra'
 require 'koala'
 require 'json'
-require './keys'
 
 GROUP_ID = "264520473627892"
-TOKEN = (production?) ? ENV['FB_ACCESS_TOKEN'] : Keys::ACCESS_TOKEN
+
+configure :production do
+  TOKEN = ENV['FB_ACCESS_TOKEN']
+end
+
+configure :development do
+  require './keys-sample'
+  TOKEN = Keys::ACCESS_TOKEN
+end
 
 graph = Koala::Facebook::API.new(TOKEN)
 
 get '/' do
   "Nothing here"
+  puts TOKEN
 end
 
 

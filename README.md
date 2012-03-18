@@ -22,6 +22,8 @@ When you have your token, add it to `keys-sample.rb` and rename that file to `ke
 		ACCESS_TOKEN = "<your token here>"
 	end
 
+Be sure to change the require in `app.rb` to `require "./keys"` instead of `keys-sample`.
+
 Check that everything works.
 
 	ruby app.rb
