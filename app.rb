@@ -110,7 +110,7 @@ post "/facebook" do
     :caption => caption
   }
   
-  msg = sprintf "%s pushed new stuff to %s", push["pusher"]["name"].split.first, push["ref"]
+  msg = sprintf("%s pushed new stuff to %s", push["pusher"]["name"].split.first, push["ref"])
   ret = graph.put_wall_post(msg, post, GROUP_ID)
   puts ret["id"]
 end
