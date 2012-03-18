@@ -14,7 +14,7 @@ Download this web service and install dependencies (uses Bundler).
 
 You need a Facebook app and an "Access Token" in order to post with the Graph API. Read more in the [Authentication info](http://developers.facebook.com/docs/authentication/#applogin) at Facebook. I recommend scanning through some [Facebook API reference](http://developers.facebook.com/docs/reference/api/) as well.
 
-A neat way of generating an Access Token is to visit Facebook's [Graph API Explorer](http://developers.facebook.com/tools/explorer) and generate from there.
+A neat way of generating an Access Token is to visit Facebook's [Graph API Explorer](http://developers.facebook.com/tools/explorer) and generate from there. Note that the access token seem to have very short expiration time – I currently have to regenerate it every 2 hours or so. I'll investigate.
 
 When you have your token, add it to `keys-sample.rb` and rename that file to `keys.rb`.
 
