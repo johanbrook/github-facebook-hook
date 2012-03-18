@@ -5,11 +5,12 @@ require 'json'
 require './keys'
 
 GROUP_ID = "264520473627892"
+TOKEN = (production?) ? ENV['FB_ACCESS_TOKEN'] : Keys::ACCESS_TOKEN
 
-graph = Koala::Facebook::API.new(Keys::ACCESS_TOKEN)
+graph = Koala::Facebook::API.new(TOKEN)
 
 get '/' do
-  "Nothing here."
+  "Nothing here"
 end
 
 
