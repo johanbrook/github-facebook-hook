@@ -2,12 +2,11 @@ require 'rubygems'
 require 'sinatra'
 require 'koala'
 require 'json'
+require './keys'
 
-APP_ID =      "113890745407534"
-APP_SECRET =  "2025b11fd4ff299f625d3cb801160b49"
-GROUP_ID =    "264520473627892"
+GROUP_ID = "264520473627892"
 
-graph = Koala::Facebook::API.new("AAABnlUFsWC4BAM2AT4u7jRyokOrfHQDlejB0jkEJK1hvVYp55KRGwfQVzUqfEh6VUHpVBh0kfgDDhyZBR3nCjFgxZAd0GX0QKe4xapKAZDZD")
+graph = Koala::Facebook::API.new(Keys::ACCESS_TOKEN)
 
 get '/' do
   "Nothing here."
