@@ -102,6 +102,11 @@ end
 post "/facebook" do
   push = JSON.parse(params[:payload])
   
+  caption = sprintf "%s file(s) modified, %s added, %s removed", 
+    push["head_commit"]["modified"].length, 
+    push["head_commit"]["added"].length, 
+    push["head_commit"]["removed"].length
+    
   post = {
     :message => sprintf("%s pushed new stuff to %s", push["pusher"]["name"].split.first, push["ref"]),
     :link => push["repository"]["url"]+"/commits",
