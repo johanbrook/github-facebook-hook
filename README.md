@@ -1,3 +1,5 @@
+![Post](http://f.cl.ly/items/1Z0G1R2c3c2y1T0h1c0P/Sk%C3%A4rmavbild%202012-03-19%20kl.%2013.08.14.png)
+
 ## Why
 
 In a project we have this private Facebook group for random links and notifications. Instead of sending annoying e-mails to every group member whenever somebody makes a `git push` to our GitHub repo, I created a simple service that posts post receive hook information to that Facebook group's wall instead.
