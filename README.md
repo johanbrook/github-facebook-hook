@@ -53,3 +53,9 @@ Press "Update Settings".
 **Done!**
 
 Whenever somebody **pushes** to the GitHub repo, your web service on Heroku will receive a POST request, and pass that along to a Facebook group's wall with the Graph API. Neat, eh?
+
+## Stuff I should do
+
+- Make the tool more general and ready almost out-of-the-box. Don't make it involve that many steps.
+- Support not only group walls, but user and friends' walls as well, perhaps with different routes.
+- Better handling of access token.
