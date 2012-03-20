@@ -30,7 +30,7 @@ post "/facebook" do
     push["head_commit"]["removed"].length
     
   post = {
-    :link => push["repository"]["url"]+"/commits",
+    :link => push["repository"]["url"]+"/commits/"+push['ref'].split("/").last,
     :name => sprintf("HEAD is now %s", push["after"][0..7]),
     :description => push["head_commit"]["message"],
     :caption => caption
