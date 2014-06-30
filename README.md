@@ -44,7 +44,7 @@ Add the access token as a Heroku environment variable.
 
 When that's done, grab the URL to your Heroku app (something like `http://<appname>.herokuapp.com`).
 
-Next, go the the GitHub repo you want to **watch**, and choose "Admin" > "Service Hooks" > "Post Receive URLs". Add the URL to your Heroku app and append `/facebook`.
+Next, go the the GitHub repo you want to **watch**, and choose "Admin" > "Webhooks & Services" > "Add webhooks. Add the URL to your Heroku app and append `/facebook`.
 
 	http://<appname>.herokuapp.com/facebook
 
