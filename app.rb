@@ -22,7 +22,7 @@ end
 
 
 post "/facebook" do
-  push = JSON.parse(params[:payload])
+  push = JSON.parse(request.body.read)
   
   caption = sprintf "%s file(s) modified, %s added, %s removed", 
     push["head_commit"]["modified"].length, 
